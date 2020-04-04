@@ -1,0 +1,17 @@
+Django proyectos desde C:
+
+
+python -m venv myvenv (dentro de la carpeta de docx u otra).
+activar scripts:
+C:\Users\Name\djangogirls> myvenv\Scripts\activate
+
+Primero crea un archivo requirements.txt dentro de tu directorio
+
+Installing Git: Windows
+
+Puedes descargar Git desde git-scm.com. Puedes hacer click en "Next" en todos los pasos excepto en dos: cuando se te pregunte que selecciones tu editor, selecciona Nano, y en el paso "adjusting your PATH environment", selecciona "Use Git and optional Unix tools from the Windows Command Prompt" (la última opción). Aparte de eso, los valores por defecto son correctos. "Checkout Windows-style, commit Unix-style line endings" tampoco necesita corrección.
+
+No olvides reiniciar el Símbolo del Sistema o el PowerShell una vez que la instalación se complete con éxito. 
+
+El comando git status muestra información sobre cualquier archivo no seguido ("untracked"), modificado ("modified"), preparado ("staged"), el estado de la rama y muchas cosas más. 
+

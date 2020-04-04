@@ -1,0 +1,10 @@
+Django proyectos desde C:
+
+
+python -m venv myvenv (dentro de la carpeta de docx u otra).
+activar scripts:
+C:\Users\Name\djangogirls> myvenv\Scripts\activate
+
+
+
+
