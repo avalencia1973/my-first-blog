@@ -14,4 +14,53 @@ Puedes descargar Git desde git-scm.com. Puedes hacer click en "Next" en todos lo
 No olvides reiniciar el Símbolo del Sistema o el PowerShell una vez que la instalación se complete con éxito. 
 
 El comando git status muestra información sobre cualquier archivo no seguido ("untracked"), modificado ("modified"), preparado ("staged"), el estado de la rama y muchas cosas más. 
+*****************************************************
+Configurar nuestro blog en PythonAnywhere
+Crea una cuenta en PythonAnywhere
+PythonAnywhere es un servicio para ejecutar código Python en servidores "en la nube". Lo vamos a usar para alojar nuestro sitio para que esté disponible en Internet.
 
+Almacenaremos del blog que estamos construyendo sobre Python Anywhere. Crea una cuenta como "Principiante/Beginner" en Python Anywhere (el modo gratuito está bien, no necesitas una tarjeta de crédito).
+
+cuenta de Gith y PythonAnywhere
+usuario:  avalencia1973
+pswrd: 76318803*76318803*
+
+se creo un token desde la consola GitHub
+
+*******************sube tu código a GitHub  PRIMERO EN CONSOLA LOCAL:
+$ git status
+Asegúrate de que estás en el directorio MYVENV y vamos a decirle a git que incluya todos los cambios en este directorio:
+$ git add --all .
+Antes de que subamos todos los archivos, vamos a ver qué es lo que git subirá (todos los archivos que git cargará deberían aparecer en verde):
+$ git status
+Ya casi estamos, ahora es tiempo de decirle que guarde este cambio en su historial. Vamos a darle un "mensaje de commit" donde describimos lo que hemos cambiado. Puedes escribir cualquier cosa que te gustaría en esta etapa, pero es útil escribir algo descriptivo para que puedes recordar lo que has hecho en el futuro.
+$ git commit -m "Cambie el HTML para la página."
+Una vez hecho esto, subimos (push) los cambios a Github:
+$ git push
+
+****************PAGINA DE CONSOLAS https://www.pythonanywhere.com/user/avalencia1973/consoles/
+
+Descarga tu nuevo código a PythonAnywhere y actualiza tu aplicación web
+
+    Abre la página de consolas de PythonAnywhere y ve a tu consola Bash (o comienza una nueva). Luego, ejecuta:
+$ cd ~/<your-pythonanywhere-domain>.pythonanywhere.com
+$ git pull
+[...]
+******ojo desde la consola bash***********
+
+Django shell
+
+Abre tu consola local (no la de PythonAnywhere) y escribe este comando dentro de myvenv:
+python manage.py shell
+
+El resultado debería ser:
+(InteractiveConsole)
+****************OBJETOS   CREAR Y FILTRAR********************* DESDE CONSOLA GIT
+QUEREMOSS CREAR UN POST DESDE CONSOLA PYTHON:
+Post.objects.create(author=me, title='Sample title', text='Test')
+queremos ver todas las entradas que contengan la palabra 'title' en el campo title?
+>>> Post.objects.filter(title__contains='title')
+
+También puedes obtener una lista de todos los post publicados en el pasado. Lo hacemos filtrando los post que tienen la fecha de publicación:
+>>> from django.utils import timezone
+>>> Post.objects.filter(published_date__lte=timezone.now())
