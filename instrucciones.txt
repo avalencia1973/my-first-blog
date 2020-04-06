@@ -64,3 +64,5 @@ queremos ver todas las entradas que contengan la palabra 'title' en el campo tit
 También puedes obtener una lista de todos los post publicados en el pasado. Lo hacemos filtrando los post que tienen la fecha de publicación:
 >>> from django.utils import timezone
 >>> Post.objects.filter(published_date__lte=timezone.now())
+
+Bootstrap   framework de htmls y css
